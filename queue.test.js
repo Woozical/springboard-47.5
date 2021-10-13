@@ -47,6 +47,10 @@ describe("peek", function() {
     expect(queue.peek()).toBe(3);
     queue.enqueue(5);
     expect(queue.peek()).toBe(3);
+    queue.dequeue();
+    expect(queue.peek()).toBe(5);
+    queue.dequeue();
+    expect(queue.peek()).toBe(null);
   });
 });
 
