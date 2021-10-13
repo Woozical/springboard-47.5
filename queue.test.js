@@ -28,8 +28,11 @@ describe("dequeue", function() {
     let removed = queue.dequeue();
     expect(removed).toBe(10);
     expect(queue.size).toBe(2);
-    queue.dequeue();
-    queue.dequeue();
+    removed = queue.dequeue();
+    expect(removed).toBe(100);
+    expect(queue.size).toBe(1);
+    removed = queue.dequeue();
+    expect(removed).toBe(1000);
     expect(queue.size).toBe(0);
   });
 
